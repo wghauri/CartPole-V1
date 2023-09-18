@@ -3,7 +3,7 @@
 ## Description
 For this project, I utilized Deep Q-Learning to train an agent in the CartPole gym environment. The agent was only provided with pixels as input. A replay buffer was used to store the agent’s experiences, and later replay them for training purposes. I implemented the epsilon greedy strategy to have the agent sufficiently explore the environment before it begins to exploit the environment.
 
-As for the network used in this project, it takes the original state as input and outputs the q-values for each possible action. Comparing the original Q-value for the action taken by the agent in the experience to the optimal Q-value helps with training and calculating loss. 
+Two networks were used for this project, one for training and estimating the Q-value (the original guess), and one for  calculating the optimal Q-value (the educated guess). Comparing the original Q-value for the action taken by the agent in the experience to the optimal Q-value helps with training and calculating loss.
 
 ## Overview
 A pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. The pendulum is placed upright on the cart and the goal is to balance the pole by applying forces in the left and right direction on the cart
